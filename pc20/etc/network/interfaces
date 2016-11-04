@@ -1,0 +1,24 @@
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+auto enp63s0
+iface enp63s0 inet static
+  address 192.168.51.20
+  netmask 255.255.255.0
+  # gateway 192.168.51.20
+
+auto enp63s0:0
+iface enp63s0:0 inet static
+  address 192.168.51.21
+  netmask 255.255.255.0
+
+auto enp63s0:1
+iface enp63s0:1 inet dhcp
+  post-up /sbin/iptables-restore < /etc/iptables.rules
+
+auto ens4
+iface ens4 inet static
+  address 192.168.0.1
+  netmask 255.255.255.0
+
