@@ -6,6 +6,8 @@
 #
 # <file system> <mount point>   <type>  <options>       <dump>  <pass>
 # / was on /dev/sda5 during installation
-UUID=9f670c82-7850-433a-b88d-c8a4405dbafa /               ext4    errors=remount-ro 0       1
+UUID=8fbf183d-cec4-4a7d-bdb0-74430733b04a /               ext4    errors=remount-ro 0       1
+# /home was on /dev/sda3 during installation
+UUID=80659dd9-fa0f-4789-9ec5-4db8f6a66af4 /home		  ext4 	  errors=remount-ro 0	    2
 # swap was on /dev/sda6 during installation
 UUID=200fc1c6-aa47-4ec4-8956-a36c52555ba5 none            swap    sw              0       0
